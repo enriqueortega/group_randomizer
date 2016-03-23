@@ -1,13 +1,13 @@
 var express = require('express');
 var app = express();
 var path = require ("path");
-var yolo = require('./public/assets/data/group.json');
+var kappans = require('./public/assets/data/group.json');
 
 app.set("port", (process.env.PORT || 8000));
 
-app.get("/yolo", function(req,res){
-  res.send(yolo);
-  console.log(yolo);
+app.get("/kappans", function(req,res){
+  res.send(kappans);
+  console.log(kappans);
 });
 
 app.get("/*", function(req,res){

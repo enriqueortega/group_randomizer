@@ -6,24 +6,30 @@
     <script type="text/javascript" src="/assets/vendors/angular.js"></script>
     <script type="text/javascript" src="/assets/vendors/angular-route.min.js"></script>
     <script type="text/javascript" src="/assets/scripts/app.js"></script>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/stylesheet.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="/assets/styles/stylesheet.css" /> -->
   </head>
   <body>
     <div ng-controller="MyController">
       <h1>Here's all of Kappa!!</h1>
 
-      <!-- Previous Code -->
-      <!-- <div ng-repeat="(id, individual) in studentPackage">
-        <div class="student">
-          {{ id }}
-          <a ng-href="{{ individual.github }}">
-            <img ng-src="{{ individual.linkedIn }}" height="100px" alt="Didn't work" />
-          </a>
-          <p>
+      <button class="button-number 2" ng-click="">2</button>
+      <button class="button-number 3">3</button>
+      <button class="button-number 4">4</button>
+      <button class="button-number 5">5</button>
+      <button class="button-number 6">6</button>
+      <button class="button-number 7">7</button>
+      <button class="button-number 8">8</button>
+      <button class="button-number 9">9</button>
+      <button class="button-number 10">10</button>
+      <button class="button-number 11">11</button>
+      <button class="button-refresh">Refresh</button>
+                                      <!-- Dynamically Change Limit -->
+      <div ng-repeat="kappans in kappaArray | limitTo: 5">
+        <p>
+          {{ kappans }}
+        </p>
+      </div>
 
-          </p>
-        </div>
-      </div> -->
     </div>
   </body>
 </html>

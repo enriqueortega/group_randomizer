@@ -2,24 +2,21 @@ var myApp = angular.module('myApp', []);
 
 // BIZZZZZZ
 myApp.controller("MyController", ["$scope", "$http", function($scope, $http){
+    $scope.kappaArray = [];
+
     $scope.getStudents = function(){
-        $http.get("/yolo").then(function(response){
-          $scope.studentPackage = response.data.students;
-          console.log(response.data.students);
-          console.log(shuffle(response.data.students));
+        $http.get("/kappans").then(function(response){
+          $scope.kappaArray = shuffle(response.data.students);
+          console.log($scope.kappaArray);
+
         });
-        console.log('hey')
+        console.log('hey');
       };
       $scope.getStudents();
+
 }]);
 
-
-// Array Shuffle
-var arr = ["Biz", "Enrique", "Aaron The Destroyer", "Mike"];
-console.log(arr);
-shuffle(arr);
-console.log(arr);
-
+// Array Shuffle (Stack Overflow)
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
   // While there remain elements to shuffle...
