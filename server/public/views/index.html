@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html np-app="myApp">
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
-    <title>group generator</title>
-
-    <!-- SCRIPTS -->
-    <script type="text/javascript" src="/assets/vendors/angular.min.js"></script>
+    <title>All of Kappa and Their Pictures</title>
+    <script type="text/javascript" src="/assets/vendors/angular.js"></script>
     <script type="text/javascript" src="/assets/vendors/angular-route.min.js"></script>
     <script type="text/javascript" src="/assets/scripts/app.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="/assets/styles/stylesheet.css" />
   </head>
   <body>
-    <p>
-        hello world
-    </p>
+    <div ng-controller="MyController">
+      <h1>Here's all of Kappa!!</h1>
+
+      <!-- Previous Code -->
+      <!-- <div ng-repeat="(id, individual) in studentPackage">
+        <div class="student">
+          {{ id }}
+          <a ng-href="{{ individual.github }}">
+            <img ng-src="{{ individual.linkedIn }}" height="100px" alt="Didn't work" />
+          </a>
+          <p>
+
+          </p>
+        </div>
+      </div> -->
+    </div>
   </body>
 </html>
